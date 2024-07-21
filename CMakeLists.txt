@@ -28,23 +28,19 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 set(SOURCE_FILES
         source/main.cpp
-        source/mainwindow.cpp
-        ui/mainwindow.ui
+        source/main_window.cpp
+        source/app_engine.cpp
+        source/widgets.cpp
 )
 
 set(HEADER_FILES
-        include/mainwindow.h
+        include/app_engine.h
+        include/widgets.h
+        include/main_window.h
 )
-
-set(UI_FILES
-        ui/mainwindow.ui
-)
-
-qt6_wrap_ui(UI_HEADERS ${UI_FILES})
 
 add_executable(${PROJECT_NAME}
         ${SOURCE_FILES}
-        ${UI_HEADERS}
         ${HEADER_FILES}
 )
 
